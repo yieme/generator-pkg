@@ -1,10 +1,10 @@
 'use strict';
 
-function <%= camelizedPackageName %>(options) {
+function <%= moduleVarName %>(options) {
   options = options || {}
 
   return true;
 }
 
 
-module.exports = function <%= camelizedPackageName %>
+module.exports = function <%= moduleVarName %>

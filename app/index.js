@@ -4,6 +4,7 @@ var util = require('util'),
     yeoman = require('yeoman-generator'),
     gitconfig = require('git-config');
 var fs     = require('fs')
+var pkg    = require('../package.json')
 
 var NodejsGenerator = module.exports = function NodejsGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
@@ -22,15 +23,23 @@ NodejsGenerator.prototype.askFor = function askFor() {
 
   // have Yeoman greet the user.
 //  console.log(this.yeoman);
-  console.log('Yeoman Package Generator. Install: npm i generator-pkg -g')
+  console.log(pkg.description + ' v' + pkg.version)
 
-  var config = gitconfig.sync();
-  var localGit = process.cwd() + '/.git/config'
-  if ((!config.github || !config.github.user) && fs.existsSync(localGit)) {
-    config = gitconfig.sync(localGit)
-  }
+  var config      = gitconfig.sync();
+  config.github   = config.github || {}
+  config.user     = config.user   || {}
+  var localGit    = process.cwd() + '/.git/config'
+  var localConfig = (fs.existsSync(localGit)) ? gitconfig.sync(localGit) : {}
+  localConfig.user        = localConfig.user || {}
+  localConfig.github      = localConfig.github || {}
+  localConfig.github.user = localConfig.github.user || {}
+  var ghuser   = config.github.user || localConfig.github.user.name
+  var username = config.user.name   || localConfig.user.name        || config.github.name  || localConfig.github.name  || ''
+//  var email    = config.user.email  || localConfig.user.email       || config.github.email || localConfig.github.email || ''
 
-  var keywords = this._.humanize(path.basename(process.cwd()).toLowerCase())
+  var keywords = this._.humanize(path.basename(process.cwd())) + ''
+  keywords = keywords.toLowerCase()
+  keywords = keywords.split(' ')
 
   var prompts = [
     {
@@ -65,6 +74,13 @@ NodejsGenerator.prototype.askFor = function askFor() {
         }
     },
     {
+      type: 'list',
+      name: 'moduleType',
+      message: 'Module Type',
+      choices: ['basic', 'middleware'],
+      default: 'basic'
+    },
+    {
       type: 'confirm',
       name: 'useGrunt',
       message: 'Use grunt?',
@@ -88,15 +104,13 @@ NodejsGenerator.prototype.askFor = function askFor() {
       type: 'input',
       name: 'githubName',
       message: 'Your github username',
-      default: (config.github && config.github.user) || ''
+      default: ghuser || username
     },
     {
       type: 'input',
       name: 'author',
       message: 'Author name',
-      default:
-        ((config.user && config.user.name) || '') +
-        (' <' + ((config.user && config.user.email) || '') + '>')
+      default: username
     }
   ];
 
