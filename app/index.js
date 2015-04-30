@@ -151,7 +151,7 @@ NodejsGenerator.prototype.build = function build() {
 NodejsGenerator.prototype.testFrameworks = function mocha() {
   this.mkdir('test');
   this.mkdir('test/fixtures');
-  this.template('index.js', 'index.js');
+  this.template('modules/' + this.moduleType + '.js', 'index.js');
 
   switch (this.testFramework) {
     case 'mocha':
