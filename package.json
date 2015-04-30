@@ -1,6 +1,6 @@
 {
   "name": "generator-pkg",
-  "version": "0.3.2",
+  "version": "0.4.1",
   "description": "Yeoman nodejs module generator",
   "keywords": [
     "yeoman-generator",
@@ -50,12 +50,5 @@
     {
       "type": "MIT"
     }
-  ],
-  "readme": "# generator-pkg\n\nA node.js module scaffolding generator for [Yeoman](http://yeoman.io).\n\n[![Build Status](https://secure.travis-ci.org/yieme/generator-pkg.png?branch=master)](https://travis-ci.org/yieme/generator-pkg)\n\n### Installation\n\nTo install generator-pkg from npm, run:\n\n```\n$ npm install -g generator-pkg\n```\n\nFinally, initiate the generator:\n\n```\n$ yo nodejs\n```\n\n![generator-pkg screenshot](https://raw.githubusercontent.com/yieme/generator-pkg/master/screenshot.png)\n\nThis generator now supports [tape](https://github.com/substack/tape),\n[mocha](https://github.com/visionmedia/mocha), and\n[redtape](https://github.com/yieme/redtape) as test frameworks.\n\nIt also supports [expect.js](https://github.com/learnboost/expect.js),\n[chai](https://github.com/chaijs/chai) and 'none' for assertion libraries for\nBDD style tests.\n\nThis generator will install the following files:\n\n* package-json - initialized with the answers to all your questions.\n* Gruntfile.js (if grunt is selected) - configured to use the following grunt modules:\n    * grunt-complexity - show code complexity\n    * grunt-contrib-jshint - run code through jshint\n    * grunt-contrib-watch - watch for changes then run tests\n    * grunt-mocha-cli (if mocha is selected as a test framework) - run mocha\n      tests (because `mocha -w` sucks)\n    * grunt-tape (if 'tape' or 'redtape' is selected as a test framework) - run\n      tape tests\n* .jshintrc - with some sane defaults (for me anyway!)\n* .travis.yml - set up so you can push and get [travis-ci](http://travis-ci.org)\n   continous integration tests.\n* .gitignore - ignore the usual cruft.\n* LICENSE - MIT initialized with your details.\n* README.md - Initialized with your details and travis-ci badges.\n* index.js - Initial library file\n* test/index.js - First unit test in the test framework of your choosing\n  (ie. mocha, tape, or redtape)\n",
-  "readmeFilename": "README.md",
-  "_id": "generator-pkg@0.1.0",
-  "_shasum": "874fc10322674a2316730b1a8938518cea068a33",
-  "_resolved": "git://github.com/yieme/generator-pkg#1684b5317ea4713f46f4b48d6c586e9b5e0eae94",
-  "_from": "git://github.com/yieme/generator-pkg",
-  "_fromGithub": true
+  ]
 }

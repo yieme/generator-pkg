@@ -97,8 +97,8 @@ NodejsGenerator.prototype.askFor = function askFor() {
       type: 'list',
       name: 'assertionLibrary',
       message: 'Assertion Library',
-      choices: ['chai', 'expect.js', 'none'],
-      default: 'chai'
+      choices: ['chai.should', 'chai.expect', 'expect.js', 'none'],
+      default: 'chai.should'
     },
     {
       type: 'input',
@@ -162,7 +162,7 @@ NodejsGenerator.prototype.testFrameworks = function mocha() {
 
   switch (this.testFramework) {
     case 'mocha':
-      this.template('test.js', 'test/index.js');
+      this.template('mocha_test/' + this.assertionLibrary + '.js', 'test/index.js');
       break;
 
     case 'tape':

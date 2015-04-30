@@ -6,4 +6,4 @@ function <%= moduleVarName %>(req, res, next) {
 }
 
 
-module.exports = function <%= moduleVarName %>
+module.exports = <%= moduleVarName %>

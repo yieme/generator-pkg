@@ -7,4 +7,4 @@ function <%= moduleVarName %>(options) {
 }
 
 
-module.exports = function <%= moduleVarName %>
+module.exports = <%= moduleVarName %>
