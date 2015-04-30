@@ -118,9 +118,9 @@ NodejsGenerator.prototype.build = function build() {
 
   if (this.useGrunt) {
     this.template('Gruntfile.js', 'Gruntfile.js');
-    this.copy('jshintrc', '.jshintrc');
-    this.copy('jshintignore', '.jshintignore');
   }
+  this.copy('jshintrc', '.jshintrc');
+  this.copy('jshintignore', '.jshintignore');
   this.copy('travis.yml', '.travis.yml');
   this.copy('gitignore', '.gitignore');
   this.copy('LICENSE', 'LICENSE');
