@@ -20,7 +20,8 @@ NodejsGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
   // have Yeoman greet the user.
-  console.log(this.yeoman);
+//  console.log(this.yeoman);
+  console.log('Yeoman Package Generator. Install: npm i generator-pkg -g')
 
   var config = gitconfig.sync();
   var keywords = this._.humanize(path.basename(process.cwd()).toLowerCase())
@@ -123,14 +124,14 @@ NodejsGenerator.prototype.build = function build() {
   this.copy('jshintignore', '.jshintignore');
   this.copy('travis.yml', '.travis.yml');
   this.copy('gitignore', '.gitignore');
-  this.copy('LICENSE', 'LICENSE');
+  this.template('LICENSE', 'LICENSE');
   this.template('README.md', 'README.md');
 };
 
 NodejsGenerator.prototype.testFrameworks = function mocha() {
   this.mkdir('test');
   this.mkdir('test/fixtures');
-  this.copy('index.js', 'index.js');
+  this.template('index.js', 'index.js');
 
   switch (this.testFramework) {
     case 'mocha':
