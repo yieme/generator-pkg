@@ -35,11 +35,9 @@
     "url": "https://github.com/<%= githubName %>/<%= moduleName %>/issues"
   },
   "dependencies": {
-<%
-    if (moduleType == 'cli') {
-      print('    "get-stdin": "^4.0.1"');
-    }
-%>
+<% if (moduleType == 'cli') { %>
+      "get-stdin": "^4.0.1"
+<% } %>
   },
   "devDependencies": {
 <%
