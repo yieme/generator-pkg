@@ -3,6 +3,7 @@ var util = require('util'),
     path = require('path'),
     yeoman = require('yeoman-generator'),
     gitconfig = require('git-config');
+var fs     = require('fs')
 
 var NodejsGenerator = module.exports = function NodejsGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
@@ -24,6 +25,11 @@ NodejsGenerator.prototype.askFor = function askFor() {
   console.log('Yeoman Package Generator. Install: npm i generator-pkg -g')
 
   var config = gitconfig.sync();
+  var localGit = process.cwd() + '/.git/config'
+  if ((!config.github || !config.github.user) && fs.existsSync(localGit)) {
+    config = gitconfig.sync(localGit)
+  }
+
   var keywords = this._.humanize(path.basename(process.cwd()).toLowerCase())
 
   var prompts = [
