@@ -1,6 +1,6 @@
 {
   "name": "generator-pkg",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "Yeoman nodejs module generator",
   "keywords": [
     "yeoman-generator",
