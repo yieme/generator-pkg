@@ -4,6 +4,7 @@
   "description": "<%= dequote(moduleDesc) %>",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "<%
       if (useGrunt) {
         print('node_modules/.bin/grunt ci');
@@ -46,7 +47,8 @@
         print('    "expect.js": "~0.3.0",');
         break;
 
-      case 'chai':
+      case 'chai.expect':
+      case 'chai.should':
         print('    "chai": "~1.10.0",');
         break;
 
