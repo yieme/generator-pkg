@@ -10,7 +10,7 @@
       } else {
         switch (testFramework) {
           case 'mocha':
-            print('jshint --config .jshintrc . && mocha -R list test/*.js');
+            print('node_modules/.bin/mocha -R list test/*.js');
             break;
 
           case 'redtape':
