@@ -10,7 +10,7 @@
       } else {
         switch (testFramework) {
           case 'mocha':
-            print('node_modules/.bin/mocha');
+            print('node_modules/.bin/jshint --config .jshintrc . && node_modules/.bin/mocha -R list test/*.js');
             break;
 
           case 'redtape':
@@ -73,6 +73,7 @@
       } else {
         switch (testFramework) {
           case 'mocha':
+            print('    "jshint": "^2.7.0",');
             print('    "mocha": "~2.1.0"');
             break;
 

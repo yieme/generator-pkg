@@ -61,7 +61,7 @@ NodejsGenerator.prototype.askFor = function askFor() {
       type: 'confirm',
       name: 'useGrunt',
       message: 'Use grunt?',
-      default: true
+      default: false
     },
     {
       type: 'list',
