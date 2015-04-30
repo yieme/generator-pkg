@@ -10,7 +10,7 @@
       } else {
         switch (testFramework) {
           case 'mocha':
-            print('echo jshint && node_modules/.bin/jshint --config .jshintrc . && echo mocha && node_modules/.bin/mocha -R list test/*.js');
+            print('jshint --config .jshintrc . && mocha -R list test/*.js');
             break;
 
           case 'redtape':
@@ -34,7 +34,13 @@
   "bugs": {
     "url": "https://github.com/<%= githubName %>/<%= moduleName %>/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+<%
+    if (moduleType == 'cli') {
+      print('    "get-stdin": "^4.0.1"');
+    }
+%>
+  },
   "devDependencies": {
 <%
     switch (assertionLibrary) {

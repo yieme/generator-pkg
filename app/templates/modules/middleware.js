@@ -1,9 +1,8 @@
 'use strict';
 
-function <%= moduleVarName %>(options) {
-  options = options || {}
+function <%= moduleVarName %>(req, res, next) {
 
-  return true;
+  next()
 }
 
 

@@ -151,7 +151,13 @@ NodejsGenerator.prototype.build = function build() {
 NodejsGenerator.prototype.testFrameworks = function mocha() {
   this.mkdir('test');
   this.mkdir('test/fixtures');
-  this.template('modules/' + this.moduleType + '.js', 'index.js');
+  if (this.moduleType == 'cli') {
+    this.mkdir('bin')
+    this.template('modules/basic.js', 'index.js'); // cli is a basic module plus a bin component
+    this.template('modules/cli.js',   'bin/cli.js');
+  } else {
+    this.template('modules/' + this.moduleType + '.js', 'index.js');
+  }
 
   switch (this.testFramework) {
     case 'mocha':
