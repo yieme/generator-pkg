@@ -35,7 +35,7 @@ NodejsGenerator.prototype.askFor = function askFor() {
       type: 'input',
       name: 'moduleDesc',
       message: 'Module description',
-      default: this._.camelize(path.basename(process.cwd()))
+      default: this._.humanize(path.basename(process.cwd()))
     },
     {
       type: 'input',
