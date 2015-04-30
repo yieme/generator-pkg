@@ -23,6 +23,7 @@ NodejsGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var config = gitconfig.sync();
+  var keywords = this._.humanize(path.basename(process.cwd()).toLowerCase())
 
   var prompts = [
     {
@@ -41,7 +42,7 @@ NodejsGenerator.prototype.askFor = function askFor() {
       type: 'input',
       name: 'keywords',
       message: 'Module keywords',
-      default: this._.humanize(path.basename(process.cwd()).split(' ').join(',').toLowerCase()),
+      default: keywords,
       filter:
         function (value) {
           if (typeof value === 'string') {
