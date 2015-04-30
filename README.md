@@ -18,7 +18,7 @@ Finally, initiate the generator:
 $ yo nodejs
 ```
 
-![generator-pkg screenshot](https://raw.github.com/yieme/generator-pkg/gh-pages/generator.gif)
+![generator-pkg screenshot](https://raw.githubusercontent.com/yieme/generator-pkg/master/screenshot.png)
 
 This generator now supports [tape](https://github.com/substack/tape),
 [mocha](https://github.com/visionmedia/mocha), and
