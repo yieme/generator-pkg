@@ -77,7 +77,7 @@ NodejsGenerator.prototype.askFor = function askFor() {
       type: 'list',
       name: 'moduleType',
       message: 'Module Type',
-      choices: ['basic', 'middleware'],
+      choices: ['basic', 'cli', 'middleware'],
       default: 'basic'
     },
     {
