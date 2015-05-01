@@ -9,8 +9,11 @@
  *  @return     {object}
  */
 function <%= moduleVarName %>Class(options) {
+  /*jshint validthis: true */
   options = options || {}
-  return 'Hello, world';
+  this.value = 'Hello, world'
+  return this
+}
 }
 
 

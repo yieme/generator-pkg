@@ -14,7 +14,8 @@ var should = require('<%
 
 describe('<%= moduleName %>', function() {
   it('should say hello', function(done) {
-    <%= moduleVarName %>().should.to.equal('Hello, world');
+    var test = <%= moduleVarName %>()
+    test.value.should.equal('Hello, world');
     done();
   });
 });
