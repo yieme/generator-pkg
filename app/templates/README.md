@@ -2,7 +2,7 @@
 
 <%= moduleDesc %>
 
-[![build status](https://secure.travis-ci.org/<%= githubName %>/<%= moduleName %>.png)](http://travis-ci.org/<%= githubName %>/<%= moduleName %>)
+<!-- [![build status](https://secure.travis-ci.org/<%= githubName %>/<%= moduleName %>.png)](http://travis-ci.org/<%= githubName %>/<%= moduleName %>) -->
 
 ## Installation
 
