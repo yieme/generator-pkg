@@ -8,12 +8,23 @@
 
 This module is installed via npm:
 
-``` bash
-$ npm install <%= moduleName %>
+```sh
+npm i <%= moduleName %> <%
+if (moduleType == 'cli') {
+  print('-g');
+} else {
+  print('--save');
+}
+%>
 ```
 
 ## Example Usage
 
-``` js
-var <%= moduleVarName %> = require('<%= moduleName %>');
+```js
+var <%= moduleVarName %> = require('<%= moduleName %>')
+console.log(<%= moduleVarName %>)())
 ```
+
+## Rights
+
+Copyright (C) <%= year => by <%= author %>, License: MIT
