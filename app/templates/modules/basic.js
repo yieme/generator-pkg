@@ -14,7 +14,6 @@ function <%= moduleVarName %>Class(options) {
   this.value = 'Hello, world'
   return this
 }
-}
 
 
 
