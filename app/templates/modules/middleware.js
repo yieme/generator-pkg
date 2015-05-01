@@ -1,16 +1,11 @@
-'use strict';
-/**
- * <%= moduleDesc %>
+/** <%= moduleDesc %>
  *
- * @author     <%= author %>
- * @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
- * @license    <%= license %>
- * @module     <%= moduleName %>
- * @param      {Object} req - The request object
- * @param      {Object} res - The response object
- * @param      {Function} next - Call the next middleware
- */
-
+ *  @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
+ *  @module     <%= moduleName %>
+ *  @param      {Object} req - The request object
+ *  @param      {Object} res - The response object
+ *  @param      {Function} next - Call the next middleware
+ */ 'use strict';
 function <%= moduleVarName %>(req, res, next) {
   next()
 }

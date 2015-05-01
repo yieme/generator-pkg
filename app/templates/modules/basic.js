@@ -1,15 +1,13 @@
-'use strict';
-/**
- * <%= moduleDesc %>
+/** <%= moduleDesc %>
  *
- * @author     <%= author %>
- * @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
- * @license    <%= license %>
- * @class
- * @param      {object} options - The options
- * @return     {object}
+ *  @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
  */
-
+ 'use strict';
+/** <%= moduleNameHuman %> class
+ *  @class
+ *  @param      {object} options - The options
+ *  @return     {object}
+ */
 function <%= moduleVarName %>Class(options) {
   options = options || {}
   return 'Hello, world';
@@ -17,17 +15,11 @@ function <%= moduleVarName %>Class(options) {
 
 
 
-/**
- * <%= moduleDesc %>
- *
- * @author     <%= author %>
- * @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
- * @license    <%= license %>
- * @module     <%= moduleName %>
- * @param      {object} options - The options
- * @return     {object}
+/** <%= moduleNameHuman %> factory
+ *  @module     <%= moduleName %>
+ *  @param      {object} options - The options
+ *  @return     {object}
  */
-
 function <%= moduleVarName %>(options) {
   return new <%= moduleVarName %>Class(options)
 }

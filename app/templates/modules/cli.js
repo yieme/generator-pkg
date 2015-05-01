@@ -1,16 +1,11 @@
 #!/usr/local/bin/node
-'use strict';
-/**
- * <%= moduleDesc %>
+/** <%= moduleDesc %>
  *
- * @author     <%= author %>
- * @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
- * @license    <%= license %>
- * @module     <%= moduleName %>
- * @param      {stream} stdin  - Standard input
- * @return     {stream} stdout - Standard output
- */
-
+ *  @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
+ *  @module     <%= moduleName %>
+ *  @param      {stream} stdin  - Standard input
+ *  @return     {stream} stdout - Standard output
+ */ 'use strict';
 var stdin = require('get-stdin')
 var <%= moduleVarName %> = require('../index.js')
 
