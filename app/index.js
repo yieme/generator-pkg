@@ -126,6 +126,9 @@ NodejsGenerator.prototype.askFor = function askFor() {
     this.testFramework = props.testFramework;
     this.assertionLibrary = props.assertionLibrary;
     this.useGrunt = props.useGrunt;
+    this.builtByName = pkg.name;
+    this.builtByVersion = pkg.version;
+    this.builtByUrl = pkg.homepage;
 
     this.dequote = function (str) {
       return str.replace(/\"/gm, '\\"');
