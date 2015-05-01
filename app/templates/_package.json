@@ -43,32 +43,6 @@
 
   "devDependencies": {
 <%
-    if (useGrunt) {
-%>
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt": "~0.4.1",
-<%
-      switch (testFramework) {
-        case 'mocha':
-          print('    "grunt-mocha-cli": "~1.1.0",');
-          break;
-
-        case 'redtape':
-          print('    "redtape": "~0.1.0",\n');
-        case 'tape':
-          print('    "tape": "~2.3.2",\n');
-          print('    "grunt-tape": "~0.0.1",');
-          break;
-      }%>
-    "grunt-complexity": "~0.1.3",
-    "grunt-cli": "~0.1.9"<%
-      }%>
-  },
-
-
-  "globalDependencies": {
-<%
     switch (assertionLibrary) {
       case 'expect.js':
         print('    "expect.js": "~0.3.0",');
@@ -83,10 +57,36 @@
         break;
     }
 
+    if (useGrunt) {
+%>
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.1",
+<%
+      switch (testFramework) {
+        case 'mocha':
+          print('    "grunt-mocha-cli": "~1.1.0",');
+          break;
+
+        case 'redtape':
+          print('    "redtape": "~0.1.0",\n');
+        case 'tape':
+          print('    "tape": "~2.3.2",\n'); print ("\n");
+          print('    "grunt-tape": "~0.0.1",');
+          break;
+      }%>
+    "grunt-complexity": "~0.1.3",
+    "grunt-cli": "~0.1.9"<%
+      }%>
+  },
+
+
+  "globalDependencies": {
+<%
     if (!useGrunt) {
         switch (testFramework) {
           case 'mocha':
-            print('    "jshint": "^2.7.0",');
+            print('    "jshint": "^2.7.0",'); print ("\n");
             print('    "mocha": "~2.1.0"');
             break;
 
@@ -97,7 +97,7 @@
             print('    "tape": "~2.3.2"');
             break;
         }
-      }%>
+    }%>
   },
 
 
