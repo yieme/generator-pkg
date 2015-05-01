@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [generator-pkg](#generator-pkg)
+  - [Installation](#installation)
+  - [Add your own module](#add-your-own-module)
+  - [License](#license)
+  - [Credits](#credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # generator-pkg
 
 [Yeoman](http://yeoman.io) nodejs module generator with multiple module types and testing frameworks
