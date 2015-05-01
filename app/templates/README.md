@@ -28,4 +28,4 @@ app.use(<%= moduleVarName %>())
 
 ## Rights
 
-Copyright (C) <%= year %> by <%= dequote(author) %>, License: MIT
+<% if (author != "") { %>Copyright (C) <%= year %> by <%= dequote(author) %>, <% } %>License: MIT
