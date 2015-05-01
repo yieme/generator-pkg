@@ -34,7 +34,7 @@
     "url": "git://github.com/yieme/generator-pkg.git"
   },
   "scripts": {
-    "doctoc": "doctoc README.md && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m 'table of contents update'; fi",
+    "doctoc": "doctoc README.md && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add README.md && git commit --no-verify -m 'table of contents update'; fi",
     "test": "exit 0 || node_modules/.bin/mocha -R list test/*.js"
   },
   "dependencies": {
