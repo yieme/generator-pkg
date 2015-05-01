@@ -1,6 +1,6 @@
 # generator-pkg
 
-[Yeoman](http://yeoman.io) nodejs module generator with multiple module types and testing frameworks
+NodeJS generator for multiple module types and testing frameworks
 
 <!-- [![Build Status](https://secure.travis-ci.org/yieme/generator-pkg.png?branch=master)](https://travis-ci.org/yieme/generator-pkg) -->
 
