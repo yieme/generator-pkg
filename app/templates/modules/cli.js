@@ -1,11 +1,11 @@
 #!/usr/local/bin/node
 'use strict';
 /**
- * <%= moduleDesc =%>
+ * <%= moduleDesc %>
  *
  * @author     <%= author %>
  * @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
- * @license    <%= license %=>
+ * @license    <%= license %>
  * @module     <%= moduleName %>
  * @param      {stream} stdin  - Standard input
  * @return     {stream} stdout - Standard output

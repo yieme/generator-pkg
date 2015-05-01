@@ -1,10 +1,10 @@
 'use strict';
 /**
- * <%= moduleDesc =%>
+ * <%= moduleDesc %>
  *
  * @author     <%= author %>
  * @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
- * @license    <%= license %=>
+ * @license    <%= license %>
  * @class
  * @param      {object} options - The options
  * @return     {object}
@@ -18,11 +18,11 @@ function <%= moduleVarName %>Class(options) {
 
 
 /**
- * <%= moduleDesc =%>
+ * <%= moduleDesc %>
  *
  * @author     <%= author %>
  * @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
- * @license    <%= license %=>
+ * @license    <%= license %>
  * @module     <%= moduleName %>
  * @param      {object} options - The options
  * @return     {object}
