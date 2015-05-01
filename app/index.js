@@ -118,6 +118,7 @@ NodejsGenerator.prototype.askFor = function askFor() {
     this.moduleName = this._.slugify(props.moduleName);
     this.moduleVarName = this._.camelize(props.moduleName);
     this.moduleType    = props.moduleType
+    this.moduleNameHuman = this._.humanize(props.moduleName);
     this.moduleDesc = props.moduleDesc;
     this.keywords = props.keywords;
     this.githubName = props.githubName;
@@ -129,6 +130,8 @@ NodejsGenerator.prototype.askFor = function askFor() {
     this.builtByName = pkg.name;
     this.builtByVersion = pkg.version;
     this.builtByUrl = pkg.homepage;
+    this.license = 'MIT';
+    this.year = new Date().getFullYear();
 
     this.dequote = function (str) {
       return str.replace(/\"/gm, '\\"');

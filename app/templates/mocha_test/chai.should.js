@@ -9,7 +9,9 @@ var should = require('<%
         break;
     }
 %>,
-    <%= moduleVarName %> = require('..');
+    <%= moduleVarName %> = require('..')
+;
+
 describe('<%= moduleName %>', function() {
   it('should say hello', function(done) {
     <%= moduleVarName %>().should.to.equal('Hello, world');
