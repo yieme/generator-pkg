@@ -3,7 +3,7 @@
 function <%= moduleVarName %>(options) {
   options = options || {}
 
-  return 'Hello world';
+  return 'Hello, world';
 }
 
 
