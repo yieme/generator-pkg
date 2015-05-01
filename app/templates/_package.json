@@ -96,8 +96,6 @@
         }
     }%>
   },
-
-
   "generatedBy": {
     "name": "<%= builtByName %>",
     "version": "<%= builtByVersion %>",
