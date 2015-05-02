@@ -1,9 +1,10 @@
 /** <%= moduleDesc %>
  *
  *  @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
+ *  @module     <%= moduleName %>
  */
  'use strict';
-/** <%= moduleNameHuman %> class
+/** <%= moduleNameHuman %>
  *  @class
  *  @param      {object} options - The options
  *  @return     {object}
@@ -17,8 +18,8 @@ function <%= moduleVarName %>Class(options) {
 
 
 
-/** <%= moduleNameHuman %> factory
- *  @module     <%= moduleName %>
+/** <%= moduleNameHuman %>
+ *  @constructor
  *  @param      {object} options - The options
  *  @return     {object}
  */
