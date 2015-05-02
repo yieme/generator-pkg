@@ -1,7 +1,7 @@
 {
   "name": "generator-pkg",
   "version": "0.7.2",
-  "description": "NodeJS generator for multiple module types and testing frameworks",
+  "description": "Node.JS generator for multiple NPM module types and testing frameworks",
   "keywords": [
     "yeoman-generator",
     "mocha",

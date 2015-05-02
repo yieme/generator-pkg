@@ -1,6 +1,6 @@
 # generator-pkg
 
-NodeJS generator for multiple module types and testing frameworks
+Node.JS generator for multiple NPM module types and testing frameworks
 
 <!-- [![Build Status](https://secure.travis-ci.org/yieme/generator-pkg.png?branch=master)](https://travis-ci.org/yieme/generator-pkg) -->
 
