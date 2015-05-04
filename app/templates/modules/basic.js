@@ -10,6 +10,7 @@
  *  @return     {object}
  */
 function <%= moduleVarName %>Class(options) {
+  /*jshint validthis: true */
   var self = this
   options = options || {}
   self.value = 'Hello, world'
