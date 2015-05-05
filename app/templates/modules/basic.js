@@ -4,6 +4,13 @@
  *  @module     <%= moduleName %>
  */
  'use strict';
+ function <%= moduleErrName %>(message) {
+     this.name = '<%= moduleErrName %>';
+     this.message = message;
+     this.stack = (new Error()).stack;
+ }
+ <%= moduleErrName %>.prototype = new Error;
+
 /** <%= moduleNameHuman %>
  *  @class
  *  @param      {object} options - The options

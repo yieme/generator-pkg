@@ -9,6 +9,7 @@
 var convar  = require('convar')
 var <%= moduleVarName %> = require('../index.js')
 
+
 function help() {
   var pkg = require('../package.json')
   console.error(pkg.description, '- v' + pkg.version)

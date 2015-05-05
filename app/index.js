@@ -117,6 +117,7 @@ NodejsGenerator.prototype.askFor = function askFor() {
   this.prompt(prompts, function (props) {
     this.moduleName = this._.slugify(props.moduleName);
     this.moduleVarName = this._.camelize(props.moduleName);
+    this.moduleErrName = this.moduleVarName.substr(0,1).toUpperCase() + this.moduleVarName.substr(2, this.moduleVarName.length-1) + 'Error'
     this.moduleType    = props.moduleType
     this.moduleNameHuman = this._.humanize(props.moduleName);
     this.moduleDesc = props.moduleDesc;
