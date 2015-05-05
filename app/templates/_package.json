@@ -4,7 +4,7 @@
   "description": "<%= dequote(moduleDesc) %>",
   "main": "index.js",
   "scripts": {<% if (moduleType == 'cli') { %>
-    "cli": "/bin/bash bin/cli.js",
+    "cli": "node bin/cli.js",
 <% } %>
     "start": "node index.js",
     "doctoc": "doctoc README.md && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add README.md && git commit --no-verify -m 'table of contents update'; fi",
