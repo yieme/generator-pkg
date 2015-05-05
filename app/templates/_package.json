@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "<%= dequote(moduleDesc) %>",
   "main": "index.js",
-  "scripts": {
+  "scripts": {<% if (moduleType == 'cli') { %>
+    "cli": "/bin/bash bin/cli.js",
+<% } %>
     "start": "node index.js",
     "doctoc": "doctoc README.md && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add README.md && git commit --no-verify -m 'table of contents update'; fi",
     "test": "<%
@@ -23,7 +25,7 @@
       }
     %>"
   }, <% if (moduleType == 'cli') { %>
-    "bin": { "cli": "./bin/cli.js" },
+    "bin": { "<%= moduleName %>": "./bin/cli.js" },
 <% } %>
   "engines": {
     "node": ">=0.10.0"
