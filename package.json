@@ -1,6 +1,6 @@
 {
   "name": "generator-pkg",
-  "version": "0.7.10",
+  "version": "0.7.11",
   "description": "Node.JS generator for multiple NPM module types and testing frameworks",
   "keywords": [
     "yeoman-generator",
