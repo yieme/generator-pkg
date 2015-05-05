@@ -24,9 +24,8 @@
         }
       }
     %>"
-  }, <% if (moduleType == 'cli') { %>
-    "bin": { "<%= moduleName %>": "./bin/cli.js" },
-<% } %>
+  },<% if (moduleType == 'cli') { %>
+  "bin": { "<%= moduleName %>": "./bin/cli.js" },<% } %>
   "engines": {
     "node": ">=0.10.0"
   },
