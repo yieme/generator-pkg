@@ -3,13 +3,13 @@
  *  @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
  *  @module     <%= moduleName %>
  */
- 'use strict';
- function <%= moduleErrName %>(message) {
-     this.name = '<%= moduleErrName %>';
-     this.message = message;
-     this.stack = (new Error()).stack;
- }
- <%= moduleErrName %>.prototype = new Error;
+'use strict';
+function <%= moduleErrName %>(message) { // ref: https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript
+  this.constructor.prototype.__proto__ = Error.prototype
+  Error.captureStackTrace(this, this.constructor)
+  this.name = this.constructor.name
+  this.message = message
+}
 
 /** <%= moduleNameHuman %>
  *  @class
