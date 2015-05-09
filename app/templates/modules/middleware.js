@@ -5,10 +5,13 @@
  *  @param      {Object} req - The request object
  *  @param      {Object} res - The response object
  *  @param      {Function} next - Call the next middleware
- */ 'use strict';
-function <%= moduleVarName %>(req, res, next) {
-  next()
-}
+ */
+(function() {
+  'use strict';
+  function <%= moduleVarName %>(req, res, next) {
+    next()
+  }
 
 
-module.exports = <%= moduleVarName %>
+  module.exports = <%= moduleVarName %>
+})();
