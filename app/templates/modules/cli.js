@@ -10,7 +10,8 @@ var convar  = require('convar')
 var <%= moduleVarName %> = require('../index.js')
 
 
-function help() {
+function help(msg) {
+  if (msg) console.error(msg)
   var pkg = require('../package.json')
   console.error(pkg.description, '- v' + pkg.version)
   console.error('Usage:', pkg.name, '--param value')
