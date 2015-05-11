@@ -22,7 +22,7 @@
     /*jshint validthis: true */
     var self = this
     options = options || {}
-    self.value = ['Hello', 'world']
+    self.value = options
     return self
   }
 
