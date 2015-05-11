@@ -22,7 +22,7 @@
     /*jshint validthis: true */
     var self = this
     options = options || {}
-    self.value = 'Hello, world'
+    self.value = ['Hello', 'world']
     return self
   }
 
@@ -34,7 +34,7 @@
    *  @return     {object}
    */
   function <%= moduleVarName %>(options) {
-    return new <%= moduleVarName %>Class(options)
+    return new <%= moduleVarName %>Class(options).value
   }
 
 

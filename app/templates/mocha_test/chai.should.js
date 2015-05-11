@@ -13,9 +13,12 @@ var should = require('<%
 ;
 
 describe('<%= moduleName %>', function() {
-  it('should say hello', function(done) {
+  var expected = ["hello", "world"]
+  var expectedString = JSON.stringify(expected)
+  it('should eaual ' + expectedString, function(done) {
     var test = <%= moduleVarName %>()
-    test.value.should.equal('Hello, world');
+    var json = JSON.stringify(test)
+    json.should.equal(expectedString);
     done();
   });
 });
