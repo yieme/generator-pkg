@@ -40,10 +40,11 @@
     "url": "https://github.com/<%= githubName %>/<%= moduleName %>/issues"
   },
   "dependencies": { <% if (moduleType == 'cli') { %>
-      "get-stdin": "^4.0.1",
-      "convar": "^1.1.6"
+      "get-stdin": "~4.0.1",
+      "convar": "~1.1.6"
 <% } %>  },
   "devDependencies": {
+    "object-attributes": "~0.1.1",
 <%
     switch (assertionLibrary) {
       case 'expect.js':
