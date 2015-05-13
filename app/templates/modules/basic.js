@@ -5,13 +5,7 @@
  */
  (function() {
   'use strict';
-  function <%= moduleErrName %>(message) { // ref: https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript
-    /*jshint validthis: true */
-    this.constructor.prototype.__proto__ = Error.prototype
-    Error.captureStackTrace(this, this.constructor)
-    this.name = this.constructor.name
-    this.message = message
-  }
+  var <%= moduleErrName %> = require('make-error')('<%= moduleErrName %>')
 
   /** <%= moduleNameHuman %>
    *  @class
