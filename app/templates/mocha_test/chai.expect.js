@@ -11,8 +11,18 @@ var expect = require('<%
 %>,
     <%= moduleVarName %> = require('..');
 describe('<%= moduleName %>', function() {
-  it('should say hello', function(done) {
-    expect(<%= moduleVarName %>()).to.equal('Hello, world');
+  it('should load', function(done) {
+    <%= moduleVarName %>()
     done();
   });
+
+  var expected = ["hello", "world"]
+  var expectedString = JSON.stringify(expected)
+  it('should eaual ' + expectedString, function(done) {
+    var test = <%= moduleVarName %>()
+    var json = JSON.stringify(test)
+    expect(<%= moduleVarName %>()).to.equal(json);
+    done();
+  });
+
 });

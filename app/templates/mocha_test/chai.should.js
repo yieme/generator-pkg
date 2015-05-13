@@ -13,6 +13,11 @@ var should = require('<%
 ;
 
 describe('<%= moduleName %>', function() {
+  it('should load', function(done) {
+    <%= moduleVarName %>()
+    done();
+  });
+
   var expected = ["hello", "world"]
   var expectedString = JSON.stringify(expected)
   it('should eaual ' + expectedString, function(done) {

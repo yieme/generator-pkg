@@ -97,8 +97,8 @@ NodejsGenerator.prototype.askFor = function askFor() {
       type: 'list',
       name: 'assertionLibrary',
       message: 'Assertion Library',
-      choices: ['chai.should', 'chai.expect', 'expect.js', 'none'],
-      default: 'chai.should'
+      choices: ['chai.expect', 'chai.should', 'expect.js', 'none'],
+      default: 'chai.expect'
     },
     {
       type: 'input',
