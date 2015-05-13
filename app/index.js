@@ -114,17 +114,21 @@ NodejsGenerator.prototype.askFor = function askFor() {
     }
   ];
 
+  function CapitalizeFirst(str) {
+    return str.substr(0,1) + str.substr(1, str.length-1)
+  }
+
   this.prompt(prompts, function (props) {
     this.moduleName = this._.slugify(props.moduleName);
     this.moduleVarName = this._.camelize(props.moduleName);
-    this.moduleErrName = this.moduleVarName.substr(0,1).toUpperCase() + this.moduleVarName.substr(1, this.moduleVarName.length-1) + 'Error'
+    this.moduleErrName = CapitalizeFirst(this.moduleVarName) + 'Error'
     this.moduleType    = props.moduleType
     this.moduleNameHuman = this._.humanize(props.moduleName);
     this.moduleDesc = props.moduleDesc;
     this.keywords = props.keywords;
     this.githubName = props.githubName;
     this.author = props.author;
-    this.copyrightName = props.author.replace(/<[^>]*?>/gm, '').trim();
+    this.copyrightName = CapitalizeFirst(props.author.replace(/<[^>]*?>/gm, '').trim());
     this.testFramework = props.testFramework;
     this.assertionLibrary = props.assertionLibrary;
     this.useGrunt = props.useGrunt;
