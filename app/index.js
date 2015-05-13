@@ -41,10 +41,6 @@ NodejsGenerator.prototype.askFor = function askFor() {
   keywords = keywords.toLowerCase()
   keywords = keywords.split(' ')
 
-  function CapitalizeFirst(str) {
-    return str.substr(0,1) + str.substr(1, str.length-1)
-  }
-
   var prompts = [
     {
       type: 'input',
@@ -114,21 +110,21 @@ NodejsGenerator.prototype.askFor = function askFor() {
       type: 'input',
       name: 'author',
       message: 'Author name',
-      default: CapitalizeFirst(username)
+      default: username
     }
   ];
 
   this.prompt(prompts, function (props) {
     this.moduleName = this._.slugify(props.moduleName);
     this.moduleVarName = this._.camelize(props.moduleName);
-    this.moduleErrName = CapitalizeFirst(this.moduleVarName) + 'Error'
+    this.moduleErrName = this._.capitalize(this.moduleVarName) + 'Error'
     this.moduleType    = props.moduleType
     this.moduleNameHuman = this._.humanize(props.moduleName);
     this.moduleDesc = props.moduleDesc;
     this.keywords = props.keywords;
     this.githubName = props.githubName;
     this.author = props.author;
-    this.copyrightName = props.author.replace(/<[^>]*?>/gm, '').trim();
+    this.copyrightName = this._.capitalize(props.author.trim());
     this.testFramework = props.testFramework;
     this.assertionLibrary = props.assertionLibrary;
     this.useGrunt = props.useGrunt;
