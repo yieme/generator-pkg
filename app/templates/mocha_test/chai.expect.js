@@ -19,9 +19,9 @@ describe('<%= moduleName %>', function() {
   var expected = ["hello", "world"]
   var expectedString = JSON.stringify(expected)
   it('should eaual ' + expectedString, function(done) {
-    var test = <%= moduleVarName %>()
+    var test = <%= moduleVarName %>(expected)
     var json = JSON.stringify(test)
-    expect(<%= moduleVarName %>()).to.equal(json);
+    expect(json).to.equal(expectedString);
     done();
   });
 
