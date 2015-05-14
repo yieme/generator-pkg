@@ -2,16 +2,30 @@
  *
  *  @copyright  Copyright (C) <%= year %> by <%= copyrightName %>
  *  @module     <%= moduleName %>
- *  @param      {Object} req - The request object
- *  @param      {Object} res - The response object
- *  @param      {Function} next - Call the next middleware
  */
-(function() {
-  'use strict';
-  function <%= moduleVarName %>(req, res, next) {
-    next()
-  }
+'use strict';
+
+function <%= moduleVarName %>(req, res, next) {
+  console.log(req.url)
+  next()
+}
 
 
-  module.exports = <%= moduleVarName %>
-})();
+function server(options) {
+  options     = options || { }
+  var express = require('express')
+  var app     = express()
+  var port    = options.port || 3000
+  var pkg     = require('./package.json')
+
+  app.use(<%= moduleVarName %>)
+  app.get('/', function(req, res){
+    res.send('OK');
+  })
+
+  app.listen(port)
+  console.log(pkg.name + '@' + pkg.version, 'listening on', port)
+}
+
+module.exports = <%= moduleVarName %>
+module.exports.server = server
