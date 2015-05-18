@@ -1,28 +1,28 @@
 var expect = require('<%
     switch (assertionLibrary) {
       case 'chai.expect':
-        print ("chai').expect");
+        print ("chai').expect")
         break;
       case 'expect.js':
       default:
-        print ("expect.js')");
+        print ("expect.js')")
         break;
     }
 %>,
-    <%= moduleVarName %> = require('..');
+    <%= moduleVarName %>
+
 describe('<%= moduleName %>', function() {
   it('should load', function(done) {
-    <%= moduleVarName %>()
-    done();
-  });
+    <%= moduleVarName %> = require('..')
+    done()
+  })
 
   var expected = ["hello", "world"]
   var expectedString = JSON.stringify(expected)
   it('should eaual ' + expectedString, function(done) {
     var test = <%= moduleVarName %>(expected)
     var json = JSON.stringify(test)
-    expect(json).to.equal(expectedString);
-    done();
-  });
-
-});
+    expect(json).to.equal(expectedString)
+    done()
+  })
+})
