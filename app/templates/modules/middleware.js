@@ -12,19 +12,7 @@ function <%= moduleVarName %>(req, res, next) {
 
 
 function server(options) {
-  options     = options || { }
-  var express = require('express')
-  var app     = express()
-  var port    = options.port || 3000
-  var pkg     = require('./package.json')
-
-  app.use(<%= moduleVarName %>)
-  app.get('/', function(req, res){
-    res.send('OK');
-  })
-
-  app.listen(port)
-  console.log(pkg.name + '@' + pkg.version, 'listening on', port)
+  return require('middle-server')(options)
 }
 
 module.exports = <%= moduleVarName %>
